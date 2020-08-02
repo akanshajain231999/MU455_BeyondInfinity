@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+  <title>MU455 MultiLangual Sentiment Analysis</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static\bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static\scrolling-nav.css" rel="stylesheet">
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script>
+  $(function() {
+  $('#submit').click(function() { //after click on submit
+    event.preventDefault();  //set to default
+    var form_data = new FormData($('#form')[0]);  // take the data from form
+// document.getElementById("demo").innerHTML = form_data;
+    $.ajax({ //apply ajax
+      type: 'POST',
+      url: '/data',  //url to data
+      data: form_data,
+      contentType: false,
+      processData: false,
+      dataType: 'json'
+    }).done(function(data,textStatus,jqXHR){
+      console.log(data);
+      console.log(textStatus);
+      console.log(jqXHR);
+      console.log('success!');
+      $('#output').text(data['msg']).show(); //receive the message from server.py in json & send the data to id->output
+     
+
+    }).fail(function(data){
+      alert('error in file uploading');
+    });
+  });
+});
+</script>
+
+<!--second card***********************************************-->
+
+<script>
+  $(function() {
+  $('#submit1').click(function() { //after click on submit
+    event.preventDefault();  //set to default
+    var form_data = new FormData($('#form1')[0]);  // take the data from form
+// document.getElementById("demo").innerHTML = form_data;
+    $.ajax({ //apply ajax
+      type: 'POST',
+      url: '/data',  //url to data
+      data: form_data,
+      contentType: false,
+      processData: false,
+      dataType: 'json'
+    }).done(function(data,textStatus,jqXHR){
+      console.log(data);
+      console.log(textStatus);
+      console.log(jqXHR);
+      console.log('success!');
+      $('#output1').text(data['msg']).show(); //receive the message from server.py in json & send the data to id->output
+     
+
+    }).fail(function(data){
+      alert('error in file uploading');
+    });
+  });
+});
+</script>
+
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">MultiLangual Sentiment Analysis</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to MultiLangual Sentiment Analysis</h1>
+      <p class="lead">It is specially designed for Sentiment Analysis for Multiple Languages</p>
+    </div>
+  </header>
+
+  <!--
+    <div class="row" style="margin-top: 20px;margin-right: 20px;margin-bottom: 20px;margin-left: 20px">
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 180px">
+                <p class="white-text mb-0">
+                  <label><b>Select Image </b></label>
+                 <input type='file' onchange="readURL(this);" accept="image/png, .jpeg, .jpg" /><br>
+
+                 <form id="form" method="post"><br>
+                  <select name="selected" style="display: none;">
+                    <option value=0>Image</option>
+                  </select>
+
+                    <input type="text" id="mytext" name="img_name">
+                  <input type="submit" id="submit" value="Submit" >
+                </form>
+                  <p id="demo"></p> 
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 180px">
+                <p class="white-text mb-0">
+                 <label><b>Display of Image </b></label>
+                  <img id="blah" src="#" alt="your image" />
+                  
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 180px">
+                <p class="white-text mb-0">
+                  <label><b>Output </b></label>
+                 <p id="output"></p>
+              </p>
+            </div>
+        </div>
+    </div> 
+</div>
+-->
+ 
+<!-- next cards........................................................................................-->
+<div class="row" style="margin-top: 20px;margin-right: 20px;margin-bottom: 20px;margin-left: 20px">
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 280px">
+                <p class="white-text mb-0">
+                  <label><b>Insert Text </b></label>
+                
+
+                 <form id="form1" method="post">
+                  <select name="selected" style="display: none;">
+                    <option value=1>Text</option>
+                  </select>
+                    <br>
+                  <textarea rows="4" cols="30" name="text_area"></textarea>
+                  <br><br><input type="submit" id="submit1" value="Submit" >
+                </form>
+ <!--                 <p id="demo"></p> -->
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    
+    <div class="col-md-3">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 280px">
+                <p class="white-text mb-0">
+                  <label><b>Output </b></label>
+                 <p id="output1" style="margin-top: 50px;font-size: 45px;color: blue"></p>
+              </p>
+            </div>
+        </div>
+    </div> 
+
+    <div class="col-md-5">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 280px">
+               <p style="font-size:14px;">
+                Examples of <b>MultiLangual Sentiment Analysis</b><br><hr>
+                <p style="font-size:14px;">Jaipur is very beautiful City <b> ---->> </b> Positive<br>Delhi is very polluted City <b> ---->> </b> Negative<br>Delhi is capital of India <b> ---->> </b> Neutral</p><hr>
+                <p style="font-size:14px;">Mera dost Best hai<b> --> </b>My friend is the best<b> --> </b> Positive<br>Mujhe apne manager se nafrat hai. <b> --> </b>I hate my manager <b> --> </b> Negative<br></p>
+                 <p style="font-size:14px;">आज का दिन हमेशा याद रहेगा क्यूंकि आज इंडिया वर्ल्ड कप जीता था<b> --> </b>This day will always be remembered because today India won the World Cup.<b> --> </b> Positive</p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<br>
+
+<br>
+<br>
+  <!-- Footer -->
+  <footer class="py-2 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; MultiLangual Sentiment Analysis</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static\vendor\jquery\jquery.min.js"></script>
+  <script src="static\vendor\bootstrap\js\bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="static\vendor\jquery-easing\jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="static\js\scrolling-nav.js"></script>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(260)
+                    .height(120);
+            };
+           reader.readAsDataURL(input.files[0]);
+        }
+    }
+ 
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+        $('input[type="file"]').change(function(e){
+            var fileName = e.target.files[0].name;
+            // document.getElementById("demo").innerHTML = fileName;
+            document.getElementById("mytext").value = fileName;
+        });
+    });
+</script>

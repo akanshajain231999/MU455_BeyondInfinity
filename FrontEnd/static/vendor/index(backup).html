@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+  <title>Mathematical Expression Solver</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="static\scrolling-nav.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Mathematical Expression Solver</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="bg-primary text-white">
+    <div class="container text-center">
+      <h1>Welcome to Mathematical Expression Solver</h1>
+      <p class="lead">It is specially designed for Solving the Mathematical Expression</p>
+    </div>
+  </header>
+    <div class="row">
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 150px">
+                <p class="white-text mb-0">
+                 <input type='file' onchange="readURL(this);" />
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 150px">
+                <p class="white-text mb-0">
+                 
+                  <img id="blah" src="#" alt="your image" />
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    <div class="col-md-4">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 150px">
+                <p class="white-text mb-0">
+                 <a href="D:\" target="_explorer.exe">Link Text</a>
+              </p>
+            </div>
+        </div>
+    </div> 
+</div>
+ 
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Mathematical Expression Solver 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom JavaScript for this theme -->
+  <script src="js/scrolling-nav.js"></script>
+
+</body>
+
+</html>
+<script type="text/javascript">
+  function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#blah')
+                    .attr('src', e.target.result)
+                    .width(260)
+                    .height(120);
+            };
+           reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
