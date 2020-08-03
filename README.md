@@ -89,7 +89,7 @@ For analyzing emojis we have imported UNICODE_EMOJI library and also made a fold
 	UNICODE_EMOJI for analyzing emojis in dataset
 
 
- # We have used three approaches to classify the sentiment of text reviews as positive or Negative.
+ # We have used three approaches to classify the sentiment of text reviews as positive or Negative or neutral.
 
 
 1.	Resource Based Semantic Analysis using HindiSentiWordnet.---> In this approach we used Hindi Sentiwordnet to classify the review's sentiment.
