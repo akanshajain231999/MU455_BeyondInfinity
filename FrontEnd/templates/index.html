@@ -95,53 +95,7 @@
     </div>
   </header>
 
-  <!--
-    <div class="row" style="margin-top: 20px;margin-right: 20px;margin-bottom: 20px;margin-left: 20px">
-    <div class="col-md-4">
-        <div class="card mdb-color lighten-2 text-center z-depth-2">
-            <div class="card-body" style="height: 180px">
-                <p class="white-text mb-0">
-                  <label><b>Select Image </b></label>
-                 <input type='file' onchange="readURL(this);" accept="image/png, .jpeg, .jpg" /><br>
-
-                 <form id="form" method="post"><br>
-                  <select name="selected" style="display: none;">
-                    <option value=0>Image</option>
-                  </select>
-
-                    <input type="text" id="mytext" name="img_name">
-                  <input type="submit" id="submit" value="Submit" >
-                </form>
-                  <p id="demo"></p> 
-              </p>
-
-            </div>
-        </div>
-    </div> 
-    <div class="col-md-4">
-        <div class="card mdb-color lighten-2 text-center z-depth-2">
-            <div class="card-body" style="height: 180px">
-                <p class="white-text mb-0">
-                 <label><b>Display of Image </b></label>
-                  <img id="blah" src="#" alt="your image" />
-                  
-              </p>
-
-            </div>
-        </div>
-    </div> 
-    <div class="col-md-4">
-        <div class="card mdb-color lighten-2 text-center z-depth-2">
-            <div class="card-body" style="height: 180px">
-                <p class="white-text mb-0">
-                  <label><b>Output </b></label>
-                 <p id="output"></p>
-              </p>
-            </div>
-        </div>
-    </div> 
-</div>
--->
+  
  
 <!-- next cards........................................................................................-->
 <div class="row" style="margin-top: 20px;margin-right: 20px;margin-bottom: 20px;margin-left: 20px">
@@ -192,6 +146,44 @@
     
 </div>
 <br>
+<!-- next cards........................................................................................-->
+
+    <div class="row" style="margin-top: 20px;margin-right: 20px;margin-bottom: 20px;margin-left: 20px">
+    <div class="col-md-5">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 180px">
+                <p class="white-text mb-0">
+                  <label><b>Insert Sentiment File</b></label><br><br>
+                 <input type='file' onchange="readURL(this);" /><br>
+
+                 <form id="form" method="post"><br>
+                  <select name="selected" style="display: none;">
+                    <option value=0>Image</option>
+                  </select>
+
+                    <input type="text" id="mytext" name="img_name">
+                  <input type="submit" id="submit" value="Submit" >
+                </form>
+                  <p id="demo"></p> 
+              </p>
+
+            </div>
+        </div>
+    </div> 
+    
+    <div class="col-md-7">
+        <div class="card mdb-color lighten-2 text-center z-depth-2">
+            <div class="card-body" style="height: 180px">
+                <p class="white-text mb-0">
+                  <label><b>Output </b></label><br>
+                
+                 <textarea rows="4" cols="70" name="text_area" id="output" style="font-size: 20px;color: blue"></textarea>
+              </p>
+            </div>
+        </div>
+    </div> 
+</div>
+
 
 <br>
 <br>
