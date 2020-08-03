@@ -1,12 +1,12 @@
 # MU455_BeyondInfinity
 Smart India Hackathon project on Multilingual Sentiment Analysis
 
-Problem Statement:
+# Problem Statement:
 
 A complete software web application which provide standard solution handle multiple code-mixed Indian languages English, Hindi, Kannada ,Bengali, Urdu etc and perform context aware Sentiment Analysis give results such as “Positive”, “Negative“ and “Neutral”.
 
 
-Problem Analysis:
+ # Problem Analysis:
 
 
 	Analysis on Different languages
@@ -26,7 +26,7 @@ Problem Analysis:
 
 
 
-Solution:
+# Solution:
 
 
 	Analysis on Different languages:
@@ -59,7 +59,7 @@ We will present a detailed analysis by scatter plots, bar graphs, pi-charts etc.
 For analyzing emojis we have imported UNICODE_EMOJI library and also made a folder of all emojis with their meaning.
 
 
-Requirements:
+# Requirements:
 
 	python3 (Anaconda environment is preferred)
 
@@ -89,7 +89,7 @@ Requirements:
 	UNICODE_EMOJI for analyzing emojis in dataset
 
 
-We have used three approaches to classify the sentiment of text reviews as positive or Negative.
+ # We have used three approaches to classify the sentiment of text reviews as positive or Negative.
 
 
 1.	Resource Based Semantic Analysis using HindiSentiWordnet.---> In this approach we used Hindi Sentiwordnet to classify the review's sentiment.
