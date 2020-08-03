@@ -1,11 +1,9 @@
 # MU455_BeyondInfinity
 Smart India Hackathon project on Multilingual Sentiment Analysis
 
-………………………………………………………………………………………………………….........................................................................................................................................
-Problem Statement- 
+Problem Statement:
 
 A complete software web application which provide standard solution handle multiple code-mixed Indian languages English, Hindi, Kannada ,Bengali, Urdu etc and perform context aware Sentiment Analysis give results such as “Positive”, “Negative“ and “Neutral”.
-……………………………………………………………………………………………………………….......................................................................................................................................
 
 
 Problem Analysis:
