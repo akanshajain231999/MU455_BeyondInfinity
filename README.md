@@ -1,4 +1,4 @@
-# MU455_BeyondInfinity
+# SMART INDIA HACKATHON 2020
 Smart India Hackathon project on Multilingual Sentiment Analysis
 
 # Problem Statement:
